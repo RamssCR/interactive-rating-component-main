@@ -1,0 +1,177 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(216deg, 12%, 8%);
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Overpass", sans-serif;
+}
+
+.flex-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-container .main-container {
+  width: 85%;
+  height: auto;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 18px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.flex-container .main-container .star {
+  width: 2.4em;
+  height: 2.4em;
+  background-color: hsla(216deg, 12%, 8%, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.flex-container .main-container .main-text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.flex-container .main-container .main-text .main-title {
+  letter-spacing: 1px;
+}
+.flex-container .main-container .main-text .paragraph {
+  color: hsl(217deg, 12%, 63%);
+  line-height: 22px;
+  font-size: 15px;
+}
+.flex-container .main-container .all-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.flex-container .main-container .all-btns .grade-btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.flex-container .main-container .all-btns .grade-btns .grade-number {
+  width: 2.8em;
+  height: 2.8em;
+  border-radius: 50%;
+  border: none;
+  color: hsl(216deg, 12%, 54%);
+  background-color: hsla(216deg, 12%, 8%, 0.5);
+  font-size: 15px;
+  transition: 300ms all ease;
+}
+.flex-container .main-container .all-btns .grade-btns .grade-number:hover {
+  background-color: hsl(216deg, 12%, 54%);
+  color: hsl(216deg, 12%, 8%);
+  cursor: pointer;
+}
+.flex-container .main-container .all-btns .grade-btns .active {
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  transition: 300ms all ease;
+}
+.flex-container .main-container .all-btns .submit {
+  width: 100%;
+  background-color: hsl(25deg, 97%, 53%);
+  color: hsl(0deg, 0%, 100%);
+  letter-spacing: 2px;
+  font-size: 15px;
+  border-radius: 20px;
+  border: none;
+  padding: 12px 0;
+  transition: 300ms all ease;
+}
+.flex-container .main-container .all-btns .submit:hover {
+  cursor: pointer;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(25deg, 97%, 53%);
+}
+.flex-container .main-container2 {
+  width: 85%;
+  height: auto;
+  background-color: hsl(213deg, 19%, 18%);
+  border-radius: 18px;
+  padding: 30px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  animation: appear 700ms ease-in-out;
+}
+.flex-container .main-container2 img {
+  width: 60%;
+}
+.flex-container .main-container2 .rate-grade {
+  width: fit-content;
+  background-color: hsla(216deg, 12%, 8%, 0.5);
+  color: hsl(25deg, 97%, 53%);
+  border-radius: 15px;
+  padding: 8px 18px;
+}
+.flex-container .main-container2 .message {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.flex-container .main-container2 .message .message-title {
+  letter-spacing: 1px;
+  font-size: 1.7rem;
+}
+.flex-container .main-container2 .message .message-text {
+  color: hsl(217deg, 12%, 63%);
+  line-height: 23px;
+}
+
+@keyframes appear {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.attribution {
+  text-align: center;
+  font-size: 0.9em;
+  color: hsl(0deg, 0%, 100%);
+}
+.attribution a {
+  color: hsl(216deg, 12%, 54%);
+  text-decoration: none;
+  font-size: 1.1em;
+}
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 658px) {
+  .flex-container {
+    height: 95vh;
+  }
+  .flex-container .main-container {
+    width: 35%;
+    padding: 30px 40px;
+  }
+  .flex-container .main-container .all-btns .grade-btns .grade-number {
+    width: 3.5em;
+    height: 3.5em;
+  }
+  .flex-container .main-container2 {
+    width: 35%;
+    padding: 30px 40px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,215 @@
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$lightGrey: hsl(217, 12%, 63%);
+$mediumGrey: hsl(216, 12%, 54%);
+$mediumTGrey: hsla(216, 12%, 54%, 0.5);
+$darkBlue: hsl(213, 19%, 18%);
+$veryDarkBlue: hsl(216, 12%, 8%);
+$veryDarkTBlue: hsla(216, 12%, 8%, 0.5);
+$paragraph: 15px;
+$mainFont: 'Overpass', sans-serif;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $veryDarkBlue;
+    color: $white;
+    font-family: $mainFont;
+}
+
+.flex-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .main-container{
+        width: 85%;
+        height: auto;
+        background-color: $darkBlue;
+        border-radius: 18px;
+        padding: 30px 25px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .star{
+            width: 2.4em;
+            height: 2.4em;
+            background-color: $veryDarkTBlue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+        }
+
+        .main-text{
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+
+            .main-title{
+                letter-spacing: 1px;
+            }
+
+            .paragraph{
+                color: $lightGrey;
+                line-height: 22px;
+                font-size: $paragraph;
+            }
+        }
+
+        .all-btns{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+
+            .grade-btns{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                .grade-number{
+                    width: 2.8em;
+                    height: 2.8em;
+                    border-radius: 50%;
+                    border: none;
+                    color: $mediumGrey;
+                    background-color: $veryDarkTBlue;
+                    font-size: $paragraph;
+                    transition: 300ms all ease;
+                }
+
+                .grade-number:hover{
+                    background-color: $mediumGrey;
+                    color: $veryDarkBlue;
+                    cursor: pointer;
+                }
+
+                .active{
+                    background-color: $orange;
+                    color: $white;
+                    transition: 300ms all ease;
+                }
+            }
+            
+            .submit{
+                width: 100%;
+                background-color: $orange;
+                color: $white;
+                letter-spacing: 2px;
+                font-size: $paragraph;
+                border-radius: 20px;
+                border: none;
+                padding: 12px 0;
+                transition: 300ms all ease;
+            }
+
+            .submit:hover{
+                cursor: pointer;
+                background-color: $white;
+                color: $orange;
+            }
+        }
+    }
+
+    .main-container2{
+        width: 85%;
+        height: auto;
+        background-color: $darkBlue;
+        border-radius: 18px;
+        padding: 30px 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        animation: appear 700ms ease-in-out;
+
+        img{
+            width: 60%;
+        }
+
+        .rate-grade{
+            width: fit-content;
+            background-color: $veryDarkTBlue;
+            color: $orange;
+            border-radius: 15px;
+            padding: 8px 18px;
+        }
+
+        .message{
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+
+            .message-title{
+                letter-spacing: 1px;
+                font-size: 1.7rem;
+            }
+
+            .message-text{
+                color: $lightGrey;
+                line-height: 23px;
+            }
+        }
+    }
+}
+
+@keyframes appear {
+    0%{
+        transform: scale(0);
+    }
+
+    100%{
+        transform: scale(1);
+    }
+}
+
+.attribution{
+    text-align: center;
+    font-size: 0.9em;
+    color: $white;
+
+    a{
+        color: $mediumGrey;
+        text-decoration: none;
+        font-size: 1.1em;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+@media only screen and (min-width: 658px){
+    .flex-container{
+        height: 95vh;
+
+        .main-container{
+            width: 35%;
+            padding: 30px 40px;
+
+            .all-btns{
+                .grade-btns{
+                    .grade-number{
+                        width: 3.5em;
+                        height: 3.5em;
+                    }
+                }
+            }
+        }
+
+        .main-container2{
+            width: 35%;
+            padding: 30px 40px;
+        } 
+    }
+}
